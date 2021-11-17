@@ -14,6 +14,9 @@ class ReportTest < ActiveSupport::TestCase
   end
 
   test '#created_on' do
-    assert_equal(@report.created_at.to_date, @report.created_on)
+    travel_to Time.zone.local(2021, 11, 12) do
+      @report.created_at = Date.new(2021, 11, 12)
+      assert_equal(Date.new(2021, 11, 12), @report.created_on)
+    end
   end
 end
