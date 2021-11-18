@@ -11,3 +11,9 @@ alice:
 bob:
   email: bob@example.com
   encrypted_password: <%= Devise::Encryptor.digest(User, 'password') %>
+marry:
+  email: marry@example.com
+  encrypted_password: <%= Devise::Encryptor.digest(User, 'password') %>
+jin:
+  email: jin@example.com
+  encrypted_password: <%= Devise::Encryptor.digest(User, 'password') %>
