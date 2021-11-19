@@ -14,9 +14,6 @@ class ReportTest < ActiveSupport::TestCase
   end
 
   test '#created_on　reportが2011年11月12に作成されたことを確認' do
-    travel_to Time.zone.local(2021, 11, 12) do
-      @report.created_at = Date.new(2021, 11, 12)
-      assert_equal(Date.new(2021, 11, 12), @report.created_on)
-    end
+    assert_equal(Date.new(2021, 11, 12), @report.created_on)
   end
 end

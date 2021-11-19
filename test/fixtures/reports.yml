@@ -4,6 +4,7 @@ repo:
   user: alice
   title: MyString
   content: MyText
+  created_at: <%= Time.new(2021, 11, 12, 12, 0, 0) %>
 
 repo2:
   user: bob
